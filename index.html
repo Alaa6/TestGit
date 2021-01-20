@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Q1</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/xl.css" media=" (max-width:  2550px)">
+  <link rel="stylesheet" href="./css/style.css" media="(max-width: 959px)">
+  <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 767px)">
+  <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 479px)">
+
+  <script src="https://kit.fontawesome.com/144b450994.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+</head>
+
+<body class="m-0 p-0" style="background: #eee; ">
+
+  <div>
+
+    <!-- start header -->
+
+    <header id="header" class="navbar  navbar-expand-sm navbar-expand-md navbar-light fixed-top   "
+      style=" background:   #4b6270; color: #fff;">
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-6 " id="navbarCollapse">
+
+        <div class=" d-flex nav-item  col-12 col-sm-12  col-md-12    col-lg-4  p-2 m-0 "
+          style=" background:   #3a4c54;">
+
+          <i class="fas fa-home mt-2 "></i>
+
+          <a class="  nav-link  " id="loginLink" href="#">
+            <p class="card-text " style="color: #fff; "> Login</p>
+          </a>
+
+        </div>
+
+        <ul class="  ml-1 navbar-nav col-8 col-sm-4 col-md-4  col-lg-8">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-globe-americas" style="  color: #fff;"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user" style="  color: #fff;"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="msg" class="nav-link " href="#">
+              <i class="fas fa-envelope" style="  color: #fff;"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="#">
+              <i class="fas fa-bell" style="  color: #fff;"></i>
+              <span id="show_count" class="badge badge-pill badge-secondary">0</span>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div id="username" class="col-4 col-sm-4 col-md-4  col-lg-4"> </div>
+
+      <img src="./imgs/ppb.png" class=" navbar-nav ml-auto rounded-circle " style="width: 3em">
+
+
+    </header>
+
+    <!-- end header -->
+
+    <!-- Start Carousel -->
+
+    <div id="ads" class="carousel slide m-4 " data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#ads" data-slide-to="0" class="active"></li>
+        <li data-target="#ads" data-slide-to="1"></li>
+        <li data-target="#ads" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div id="slide" class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="container">
+            <img class="d-block w-100 h-50 img-fluid" src="./imgs/1.jpg" alt="First slide">
+          </div>
+
+        </div>
+        <div class="carousel-item ">
+          <div class="container">
+            <img class="d-block w-100 h-100 img-fluid" src="./imgs/bg.jpg" alt="Second slide">
+          </div>
+        </div>
+        <div class="carousel-item">text
+          <div  class="container">
+            <img class="d-block w-100 h-100 img-fluid" src="./imgs/4.jpg" alt="Third slide">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+
+      <a class="carousel-control-prev " href="#ads" role="button" data-slide="prev">
+
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <i class="fas fa-chevron-circle-left" style="font-size: 2em;"></i>
+        <span class="sr-only">Previous</span>
+
+
+
+      </a>
+
+      <a class="carousel-control-next" href="#ads" role="button" data-slide="next">
+
+        <i class="fas fa-chevron-circle-right" style="font-size: 2em;"></i>
+      </a>
+
+
+
+    </div>
+
+    <!--  End Carousel-->
+
+    <!-- Start Modal -->
+
+    <div id="login" class="modal fade" role="dialog">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+          </div>
+
+          <div class="modal-body">
+            <form class="mt-3" action="#" method="GET">
+              <div class="form-group row ">
+                <label for="usrNm" class="col-3  col-sm-3 mt-1">Username :</label>
+                <input id="usrNm" name="username" type="text" class="form-control input-sm col-4">
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="col-3 col-sm-3 mt-1"> password :</label>
+                <input id="password" name="password" type="password" class="form-control input-sm col-4 col-sm-4">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="loginBtn" type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- End Modal -->
+
+
+
+
+
+    <!-- start body -->
+    <div class="container row  mt-3">
+
+      <!-- start aside left -->
+      <aside id="left" class="  col-12 col-sm-12  col-md-12  col-lg-3 col-xl-3 ">
+
+        <div class="card-deck ">
+ 
+          <div class="card ">
+
+
+            <p class="text card-title text-center"> My Profile</p>
+            <div class="text-center">
+              <img src="./imgs/ppb.png " class="rounded-circle card-img-top  " style="width: 5em">
+
+            </div>
+
+            <hr class=" row mr-4 ml-4" style=" color:  #b2b2b3; ">
+
+
+            <div class="card-body ">
+
+              <div class="row mt-1">
+                <i class="fas fa-pen  col-3 col-sm-3 col-md-3  col-lg-3 col-xl-3  mt-1 ml-3 "
+                  style="color: #697799; "></i>
+                <p class=" text card-text   "> Designer ,UI</p>
+              </div>
+
+              <div class="row mt-1">
+                <i class="fas fa-home  col-3 col-sm-3 col-md-3  col-lg-3 col-xl-3  mt-1 ml-3 "
+                  style="color: #697799 ; "></i>
+                <p class=" text card-text">London ,UK</p>
+              </div>
+
+              <div class="row mt-1">
+                <i class="fas fa-birthday-cake  col-3 col-sm-3 col-md-3  col-lg-3 col-xl-3  mt-1 ml-3 "
+                  style="color: #697799; "></i>
+                <p class=" text card-text">Abril 1, 1988</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="card-deck mt-3">
+
+          <div class="card " style="background: #697799; color: #fff;">
+            <div class="card-body ">
+
+              <div class="row mt-1">
+                <i class="fas fa-pen  col-2  mt-1" style="color: #fff; "></i>
+                <p class=" text card-text col-10"> Designer ,UI</p>
+              </div>
+
+
+              <div class="row mt-1">
+                <i class="fas fa-home col-2 mt-1" style="color: #ffff ; "></i>
+                <p class="card-text col-10">London ,UK</p>
+
+              </div>
+
+              <div class="row mt-1">
+                <i class="fas fa-birthday-cake col-2 mt-1" style="color: #fff; "></i>
+                <p class="card-text col-10">Abril 1, 1988</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-deck mt-3">
+          <div class="card shadow-sm mt-3 " style=" background: #fff; ">
+            <div class="card-body ">
+              <p class="card-title"> Interests</p>
+
+              <div class="d-flex flex-wrap">
+                <div class="p-1 mr-1 mt-1" style="background: #3a4c54; color: #fff;">News</div>
+                <div class="p-1 mr-1 mt-1" style="background: #4b6270; color: #fff;">Games</div>
+                <div class="p-1 mr-1 mt-1" style="background: #9aafba; color: #212121;">Friends</div>
+                <div class="p-1 mr-1 mt-1" style="background: #dde4e7; color: #212121;;">Design</div>
+                <div class="p-1 mr-1 mt-1" style="background: #f4f7f8; color:  #212121;;">Photos</div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div id="msg2" class="alert  alert-dismissible fade show mt-3" style="background:   #dde4e7;" >
+          <p style="font-weight: 600;">Hey !</p>
+          <button type="button" class="close" data-dismiss="alert" style="background: #bbc9d1;">&times;</button>
+          People are looking at your profile. Find out who.
+         </div>
+
+
+
+
+
+
+      </aside>
+      <!-- end aside left -->
+
+      <!-- start artical -->
+      <article id="center" class="col-12 col-sm-12  col-md-12   col-lg-7 col-xl-7">
+
+        <div class="card bg-white shadow-sm">
+          <div class="card-body">
+            <p style="color: gray;">Social Media Templete by bootstrap :</p>
+            <input class="form-control" type="text" placeholder="status">
+            <button type="submit" class=" col-3 text-center p-2  mt-2" style="background: #4b6270; color: #fff;">
+              <i class="fas fa-pen col-2 mt-1 mr-1" style="color: #fff; "></i>
+              Post
+            </button>
+          </div>
+        </div>
+
+        <div class="card bg-white shadow-sm mt-2">
+
+          <div class="card-body row ">
+
+            <!-- <div class="row col-6 " > -->
+
+            <img src="./imgs/ppb.png" class="rounded-circle col-2 col-sm-2 col-md-2  col-lg-2 col-xl-2  mr-3"
+              style="width: 10%;" height="10%">
+
+            <p class="card-text  col-8 col-sm-8 col-md-8  col-lg-8 col-xl-8 "> Alaa Ashraf</p>
+
+            <!-- </div> -->
+
+          </div>
+          <div class="card-body  text-center">
+
+            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempore id sapiente
+              beatae. Expedita nobis aliquid voluptates recusandae sit assumenda modi aliquam autem, reiciendis aperiam
+              inventore unde ducimus labore provident!</p>
+            <div class=" d-flex justify-content-around">
+              <img src="./imgs/bg.png" class=" ">
+              <img src="./imgs/bg.png" class="">
+
+            </div>
+
+
+
+          </div>
+          <div class="card-body">
+            <button type="submit" class="col-5 col-sm-5 col-md-5  col-lg-3 col-xl-3  text-center p-2  mt-2"
+              style="background: #4b6270; color: #fff;">
+              <i class="fas fa-thumbs-up  mt-1 mr-1" style="color: #fff; "></i>
+              Like
+            </button>
+            <button id="comment" type="submit" class=" col-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 text-center p-2  mt-2"
+              style="background: #4b6270; color: #fff;" data-toggle="collapse" data-target="#showMsg">
+              <i class="fas fa-comment  mt-1 mr-1" style="color: #fff; "></i>
+              Comment
+            </button>
+            <div id="showMsg" class="collapse" data-parent="comment">
+              show by collapse
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+
+        <div class="card bg-white shadow-sm mt-2">
+
+          <div class="card-body row ">
+
+            <!-- <div class="row col-6 " > -->
+
+            <img src="./imgs/ppb.png" class="rounded-circle col-2 col-sm-2 col-md-5  col-lg-2 col-xl-32 mr-3"
+              style="width: 10%;" height="10%">
+
+            <p class="card-text col-8 col-sm-8 col-md-8  col-lg-8 col-xl-8 "> Alaa Ashraf</p>
+
+            <!-- </div> -->
+
+          </div>
+          <div class="card-body  text-center">
+
+            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempore id sapiente
+              beatae. Expedita nobis aliquid voluptates recusandae sit assumenda modi aliquam autem, reiciendis aperiam
+              inventore unde ducimus labore provident!</p>
+
+
+          </div>
+          <div class="card-body">
+            <button type="submit" class=" col-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 text-center p-2  mt-2"
+              style="background: #4b6270; color: #fff;">
+              <i class="fas fa-thumbs-up  mt-1 mr-1" style="color: #fff; "></i>
+              Like
+            </button>
+            <button type="submit" class=" col-5 col-sm-5 col-md-5  col-lg-3 col-xl-3  text-center p-2  mt-2"
+              style="background: #4b6270; color: #fff;">
+              <i class="fas fa-comment  mt-1 mr-1" style="color: #fff; "></i>
+              Comment
+            </button>
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+      <!-- end artical -->
+
+      <!-- start aside right -->
+
+      <aside id="right" class="col-12 col-sm-12  col-md-12  col-lg-2 col-xl-2 ">
+
+        <div class="card-deck ">
+          <div class="card shadow-sm p-2">
+            <p class="card-title text-center mt-3">Upcaming Events</p>
+            <img src="./imgs/bg.png" class="card-img-top  ">
+            <div class="card-body  ">
+              <h4 class="card-text mt-2">Holiday</h4>
+              <p>Friday 15:00</p>
+              <input class="col-12 text-center p-1 rounded btn" type="button" value="info" style="background: #eee;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-deck  mt-3">
+          <div class="card shadow-sm p-2">
+            <p class="card-title text-center mt-3"> Friend Request</p>
+
+            <img src="./imgs/ppg.png" class="card-img-top w-50 align-self-center">
+            <div class="card-body  ">
+              <p class="card-text text-center">Jone Doe</p>
+
+              <div class="d-flex ">
+                <div class=" d-flex w-50 justify-content-center  align-items-center"
+                  style="background:   rgba(46, 204, 113, 1); color: #eee;">
+                  <i class="fas fa-check align-self-center"></i>
+                </div>
+                <!-- <button class="btn w-50" style="background:   rgba(46, 204, 113, 1); color: #eee;">
+                  <i class="fas fa-check"></i>
+                </button> -->
+                <!-- <button class="btn w-50" style="background: rgba(226, 106, 106, 1); color: #eee;">
+                  <i class="fas fa-times"></i>
+                </button> -->
+                <div class=" d-flex w-50 justify-content-center  align-items-center"
+                  style="background:   rgba(226, 106, 106, 1);  color: #eee;">
+
+                  <i class="fas fa-times"></i>
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card-deck mt-3 ">
+          <div class="card shadow-sm p-2">
+
+            <p class="card-title text-center mt-3">ADS</p>
+  
+          </div>
+        </div>
+
+        <div class="card-deck mt-3 ">
+          <div class="card shadow-sm p-2">
+
+            <p class=" text-center mt-3">
+              <i class="fas fa-bug" style="font-size: 28px;"></i>
+            </p>
+  
+          </div>
+        </div>
+    
+
+      </aside>
+      <!-- end aside right -->
+
+    </div>
+
+    <footer class="d-flex flex-column justify-content-between   mt-5  0" style="background:#4b6270;  color: #fff;  height: 70x;">
+
+     <p class="ml-3 ">Footer</p>
+     <p style="color: #fff ; background: #3a4c54;" class="col-12 col-sm-12  col-md-12  col-lg-12 col-xl-12   p-2 " >  Power By <span   style="text-decoration: underline;"> Alaa </span>  </p>
+
+
+
+  </footer>
+
+
+  </div>
+
+  
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
